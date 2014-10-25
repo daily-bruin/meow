@@ -133,6 +133,9 @@ Thanks,
             return (None,None)
         elif self.story_short_url:
             return (self.story_url, self.story_short_url)
+        else:
+            return (self.story_url, self.story_url)
+               
         
         # Set up for Bitly Goodness
         BITLY_ACCESS_TOKEN = MeowSetting.objects.get(setting_key='bitly_access_token').setting_value
